@@ -1,0 +1,21 @@
+#+TITLE: How to solve a problem in python
+
+* Approach
+1. Concept inventory
+2. Refine ideas
+3. Simple implemention
+4. Back envolope (About how long it will take)
+5. Refine code (Make it faster if need)
+* Idea of building tools
+1. Timing
+2. Counts
+* Separation of aspects
+Make Computer design as clean as possible
+by separate the codes in three different parts
+
+1. Correct
+2. Efficient
+3. Debug
+
+So that you can tell what was working on making the problem right
+and what was working on making it more efficient
