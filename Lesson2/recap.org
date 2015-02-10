@@ -1,0 +1,20 @@
+#+TITLE: Lesson 2 Recap
+* Python
+** List comprehension
+[x**2 for ...]
+** Generator expressions
+(x**2 for ...)
+** Generator function
+yield x
+** Handling types "Polymophism"
+timedcalls(n, ...)
+if isinstance(n, int):
+    ...
+else:
+    ...
+
+* Instrumentation
+** Timing
+- time.clock()
+- timedcalls(s)
+** Counting
