@@ -1,0 +1,22 @@
+#+TITLE: Lesson 3
+* Introduction
+** Software tools
+1. Language
+2. Functions
+* Regular Expressions Review
+** Find substring string
+1. Use find function
+s = 'some long thing with words'
+s.find('word') => 21 (-1)
+2. Use re
+'baa*!'
+** Regular Expressions
+| special | example | match               | meaning                |
+| *       | a*      | '', a, aa, aaa, ... | anystring              |
+| ?       | a?      | '', a               | zero or one appearence |
+| .       | .       | a, b, c, 7, !,...   | any single character   |
+| ^       | ^b      | ba, bb, ...         | beginning of the line  |
+| $       | a$      | ba, aa              | end of the line        |
+| ''      | ''      | ''                  | empty string           |
+| a       | a       | a                   | single character       |
+* Regular Expressions Review
