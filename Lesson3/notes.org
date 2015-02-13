@@ -20,3 +20,6 @@ s.find('word') => 21 (-1)
 | ''      | ''      | ''                  | empty string           |
 | a       | a       | a                   | single character       |
 * Regular Expressions Review
+** [[./rer_quiz1.py][Quiz 1]]
+** [[./rer_quiz2.py][Quiz 2]]
+** [[./rer_quiz3.py][Quiz 3]]
