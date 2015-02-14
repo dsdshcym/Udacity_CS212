@@ -54,5 +54,7 @@ Application Programming interface
 - text -- result
 - partial result ::
 'a*b+' -> 'aaab' -> 'ab' or 'aab' or 'aaab'
-set of remainders
+[[./matchset.py][set of remainders]]
 - control over iteration
+* [[./filling_out_the_api.py][Filling Out The API]]
+
