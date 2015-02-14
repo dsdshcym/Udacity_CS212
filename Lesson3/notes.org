@@ -5,21 +5,54 @@
 2. Functions
 * Regular Expressions Review
 ** Find substring string
-1. Use find function
+
+- Use find function ::
+#+begin_src python
 s = 'some long thing with words'
 s.find('word') => 21 (-1)
-2. Use re
-'baa*!'
+#+end_src
+- Use re ::
+#+begin_src python
+  re.search('baa*!', s)
+#+end_src
 ** Regular Expressions
-| special | example | match               | meaning                |
-| *       | a*      | '', a, aa, aaa, ... | anystring              |
-| ?       | a?      | '', a               | zero or one appearence |
-| .       | .       | a, b, c, 7, !,...   | any single character   |
-| ^       | ^b      | ba, bb, ...         | beginning of the line  |
-| $       | a$      | ba, aa              | end of the line        |
-| ''      | ''      | ''                  | empty string           |
-| a       | a       | a                   | single character       |
+| special | example | match               | meaning                                   |
+| *       | a*      | '', a, aa, aaa, ... | any length of repeat of the previous char |
+| ?       | a?      | '', a               | zero or one appearence                    |
+| .       | .       | a, b, c, 7, !,...   | any single character                      |
+| ^       | ^b      | ba, bb, ...         | beginning of the line                     |
+| $       | a$      | ba, aa              | end of the line                           |
+| ''      | ''      | ''                  | empty string                              |
+| a       | a       | a                   | single character                          |
 * Regular Expressions Review
 ** [[./rer_quiz1.py][Quiz 1]]
 ** [[./rer_quiz2.py][Quiz 2]]
 ** [[./rer_quiz3.py][Quiz 3]]
+* Language
+** Python
+1. Statements
+2. Expressions
+3. Format
+4. Class - operator overloading
+** Domain Specific Language
+* The Language of Regular Expressions
+** Grammar
+A description for a specific Language
+** API
+Application Programming interface
+*** Exp:
+| lit(s)    | lit('a')                | {a}             |
+| seq(x, y) | seq(lit('a'), lit('b')) | {ab}            |
+| alt(x, y) | alt(lit('a'), lit('b')) | {a, b}          |
+| star(x)   | star(lit('a'))          | {'', a, aa,...} |
+| oneof(c)  | oneof('abc')            | {a, b, c}       |
+| eol       | eol                     | {''}            |
+| dot       | dot                     | {a, b, c, ...}  |
+* Specifications
+* Concept Inventory
+- pattern
+- text -- result
+- partial result ::
+'a*b+' -> 'aaab' -> 'ab' or 'aab' or 'aaab'
+set of remainders
+- control over iteration
