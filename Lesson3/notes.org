@@ -57,4 +57,10 @@ Application Programming interface
 [[./matchset.py][set of remainders]]
 - control over iteration
 * [[./filling_out_the_api.py][Filling Out The API]]
-
+* [[./search_and_match.py][Search and Match]]
+- match(p, t) ::
+Match pattern against start of text; return longest match found or None.
+- search(p, t) ::
+Match pattern anywhere in text; return longest earliest match or None.
+- matchset(p, t) ::
+Match pattern at start of text; return a set of remainders of text.
