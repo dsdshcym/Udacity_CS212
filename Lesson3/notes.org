@@ -89,3 +89,4 @@ matchset(pat2, 'aaaaab')
 - Python Functions :: flexibility
 - Language VM :: Machine Instructions
 * [[./alt.py][Alt]]
+* [[./simple_compilers.py][Simple Compilers]]
