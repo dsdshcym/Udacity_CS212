@@ -17,6 +17,7 @@ s.find('word') => 21 (-1)
 #+end_src
 ** Regular Expressions
 | special | example | match               | meaning                                   |
+|---------+---------+---------------------+-------------------------------------------|
 | *       | a*      | '', a, aa, aaa, ... | any length of repeat of the previous char |
 | ?       | a?      | '', a               | zero or one appearence                    |
 | .       | .       | a, b, c, 7, !,...   | any single character                      |
@@ -51,11 +52,11 @@ Application Programming interface
 * Specifications
 * Concept Inventory
 - pattern
-- text -- result
-- partial result ::
+- text —— result
+- control over iteration
+- partial result
 'a*b+' -> 'aaab' -> 'ab' or 'aab' or 'aaab'
 [[./matchset.py][set of remainders]]
-- control over iteration
 * [[./filling_out_the_api.py][Filling Out The API]]
 * [[./search_and_match.py][Search and Match]]
 - match(p, t) ::
@@ -64,3 +65,7 @@ Match pattern against start of text; return longest match found or None.
 Match pattern anywhere in text; return longest earliest match or None.
 - matchset(p, t) ::
 Match pattern at start of text; return a set of remainders of text.
+* Compiling
+| pattern      | lanuage         | compiler                     |
+|--------------+-----------------+------------------------------|
+| (a \vert b)+ | {a,b,ab,ba,...} | compile(pattern)->c->c(text) |
