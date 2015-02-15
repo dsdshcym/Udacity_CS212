@@ -69,3 +69,23 @@ Match pattern at start of text; return a set of remainders of text.
 | pattern      | lanuage         | compiler                     |
 |--------------+-----------------+------------------------------|
 | (a \vert b)+ | {a,b,ab,ba,...} | compile(pattern)->c->c(text) |
+* Lower Level Compilers
+#+begin_src python
+pat = lit('a')
+pat
+>>> function<lambda> ...
+pat('a string')
+>>> set([' string'])
+
+pat2 = plus(pat)
+pat2
+>>> function<lambda> ...
+pat2('aaaaab')
+
+matchset(pat2, 'aaaaab')
+#+end_src
+
+** Pros
+- Python Functions :: flexibility
+- Language VM :: Machine Instructions
+* [[./alt.py][Alt]]
