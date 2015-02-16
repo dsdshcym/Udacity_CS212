@@ -90,3 +90,15 @@ matchset(pat2, 'aaaaab')
 - Language VM :: Machine Instructions
 * [[./alt.py][Alt]]
 * [[./simple_compilers.py][Simple Compilers]]
+* Recognizers and Generators
+- Recognizers :: match(pat, text) -> txt | None
+- Generator :: gen(pat) -> L
+  - Finite Language :: (a | b)(a | b) = {aa, ab, ba, bb}
+  - Inifinite Language ::
+       a* = { , a, aa, aaa, ...}
+
+       pat({int}) -> {str}
+
+       pat = a*
+
+       pat({1, 2, 3}) -> {a, aa, aaa}
