@@ -102,3 +102,58 @@ matchset(pat2, 'aaaaab')
        pat = a*
 
        pat({1, 2, 3}) -> {a, aa, aaa}
+* Avoid Repetition
+* Genseq
+* Induction
+:LOGBOOK:
+CLOCK: [2015-02-25 Wed 10:10]--[2015-02-25 Wed 10:12] =>  0:02
+:END:
+[2015-02-25 Wed 10:10]
+** Star
+** Plus
+** Induction
+Ns = 1
+* Testing Genseq
+:LOGBOOK:
+CLOCK: [2015-02-25 Wed 10:13]--[2015-02-25 Wed 10:15] =>  0:02
+:END:
+[2015-02-25 Wed 10:13]
+* Theory and Practice
+:LOGBOOK:
+CLOCK: [2015-02-25 Wed 10:16]--[2015-02-25 Wed 10:33] =>  0:17
+:END:
+[2015-02-25 Wed 10:15]
+* Theory
+[2015-02-25 Wed 10:20]
+
+pattern + grammer -> language
+
+interpreter -> grammer
+
+compiler -> pattern
+* Practice
+- reg exp ::
+- interpreters :: more expresive and more natural
+- functions ::
+              more composable
+
+              and give us the ability to control over
+              time (do it now or do it later)
+[2015-02-25 Wed 10:21]
+* Changing Seq
+:LOGBOOK:
+CLOCK: [2015-02-25 Wed 10:34]--[2015-02-25 Wed 10:45] =>  0:11
+:END:
+[2015-02-25 Wed 10:34]
+** Refactoring
+[2015-02-25 Wed 10:39]
+- Backward compatible
+- Internal / External
+* Changing Functions
+[2015-02-25 Wed 10:45]
+* Function Mapping
+:LOGBOOK:
+CLOCK: [2015-02-25 Wed 10:46]--[2015-02-25 Wed 10:47] =>  0:01
+:END:
+[2015-02-25 Wed 10:46]
+Adapter
