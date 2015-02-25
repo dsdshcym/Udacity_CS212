@@ -1,10 +1,11 @@
 #+TITLE: Lesson 3
-* Introduction
-** Software tools
+* Lesson 3
+** Introduction
+*** Software tools
 1. Language
 2. Functions
-* Regular Expressions Review
-** Find substring string
+** Regular Expressions Review
+*** Find substring string
 
 - Use find function ::
 #+begin_src python
@@ -15,7 +16,7 @@ s.find('word') => 21 (-1)
 #+begin_src python
   re.search('baa*!', s)
 #+end_src
-** Regular Expressions
+*** Regular Expressions
 | special | example | match               | meaning                                   |
 |---------+---------+---------------------+-------------------------------------------|
 | *       | a*      | '', a, aa, aaa, ... | any length of repeat of the previous char |
@@ -25,23 +26,23 @@ s.find('word') => 21 (-1)
 | $       | a$      | ba, aa              | end of the line                           |
 | ''      | ''      | ''                  | empty string                              |
 | a       | a       | a                   | single character                          |
-* Regular Expressions Review
-** [[./rer_quiz1.py][Quiz 1]]
-** [[./rer_quiz2.py][Quiz 2]]
-** [[./rer_quiz3.py][Quiz 3]]
-* Language
-** Python
+** Regular Expressions Review
+*** [[./rer_quiz1.py][Quiz 1]]
+*** [[./rer_quiz2.py][Quiz 2]]
+*** [[./rer_quiz3.py][Quiz 3]]
+** Language
+*** Python
 1. Statements
 2. Expressions
 3. Format
 4. Class - operator overloading
-** Domain Specific Language
-* The Language of Regular Expressions
-** Grammar
+*** Domain Specific Language
+** The Language of Regular Expressions
+*** Grammar
 A description for a specific Language
-** API
+*** API
 Application Programming interface
-*** Exp:
+**** Exp:
 | lit(s)    | lit('a')                | {a}             |
 | seq(x, y) | seq(lit('a'), lit('b')) | {ab}            |
 | alt(x, y) | alt(lit('a'), lit('b')) | {a, b}          |
@@ -49,27 +50,27 @@ Application Programming interface
 | oneof(c)  | oneof('abc')            | {a, b, c}       |
 | eol       | eol                     | {''}            |
 | dot       | dot                     | {a, b, c, ...}  |
-* Specifications
-* Concept Inventory
+** Specifications
+** Concept Inventory
 - pattern
 - text —— result
 - control over iteration
 - partial result
 'a*b+' -> 'aaab' -> 'ab' or 'aab' or 'aaab'
 [[./matchset.py][set of remainders]]
-* [[./filling_out_the_api.py][Filling Out The API]]
-* [[./search_and_match.py][Search and Match]]
+** [[./filling_out_the_api.py][Filling Out The API]]
+** [[./search_and_match.py][Search and Match]]
 - match(p, t) ::
 Match pattern against start of text; return longest match found or None.
 - search(p, t) ::
 Match pattern anywhere in text; return longest earliest match or None.
 - matchset(p, t) ::
 Match pattern at start of text; return a set of remainders of text.
-* Compiling
+** Compiling
 | pattern      | lanuage         | compiler                     |
 |--------------+-----------------+------------------------------|
 | (a \vert b)+ | {a,b,ab,ba,...} | compile(pattern)->c->c(text) |
-* Lower Level Compilers
+** Lower Level Compilers
 #+begin_src python
 pat = lit('a')
 pat
@@ -85,12 +86,12 @@ pat2('aaaaab')
 matchset(pat2, 'aaaaab')
 #+end_src
 
-** Pros
+*** Pros
 - Python Functions :: flexibility
 - Language VM :: Machine Instructions
-* [[./alt.py][Alt]]
-* [[./simple_compilers.py][Simple Compilers]]
-* Recognizers and Generators
+** [[./alt.py][Alt]]
+** [[./simple_compilers.py][Simple Compilers]]
+** Recognizers and Generators
 - Recognizers :: match(pat, text) -> txt | None
 - Generator :: gen(pat) -> L
   - Finite Language :: (a | b)(a | b) = {aa, ab, ba, bb}
@@ -102,28 +103,28 @@ matchset(pat2, 'aaaaab')
        pat = a*
 
        pat({1, 2, 3}) -> {a, aa, aaa}
-* Avoid Repetition
-* Genseq
-* Induction
+** Avoid Repetition
+** Genseq
+** Induction
 :LOGBOOK:
 CLOCK: [2015-02-25 Wed 10:10]--[2015-02-25 Wed 10:12] =>  0:02
 :END:
 [2015-02-25 Wed 10:10]
-** Star
-** Plus
-** Induction
+*** Star
+*** Plus
+*** Induction
 Ns = 1
-* Testing Genseq
+** Testing Genseq
 :LOGBOOK:
 CLOCK: [2015-02-25 Wed 10:13]--[2015-02-25 Wed 10:15] =>  0:02
 :END:
 [2015-02-25 Wed 10:13]
-* Theory and Practice
+** Theory and Practice
 :LOGBOOK:
 CLOCK: [2015-02-25 Wed 10:16]--[2015-02-25 Wed 10:33] =>  0:17
 :END:
 [2015-02-25 Wed 10:15]
-* Theory
+** Theory
 [2015-02-25 Wed 10:20]
 
 pattern + grammer -> language
@@ -131,7 +132,7 @@ pattern + grammer -> language
 interpreter -> grammer
 
 compiler -> pattern
-* Practice
+** Practice
 - reg exp ::
 - interpreters :: more expresive and more natural
 - functions ::
@@ -140,18 +141,18 @@ compiler -> pattern
               and give us the ability to control over
               time (do it now or do it later)
 [2015-02-25 Wed 10:21]
-* Changing Seq
+** Changing Seq
 :LOGBOOK:
 CLOCK: [2015-02-25 Wed 10:34]--[2015-02-25 Wed 10:45] =>  0:11
 :END:
 [2015-02-25 Wed 10:34]
-** Refactoring
+*** Refactoring
 [2015-02-25 Wed 10:39]
 - Backward compatible
 - Internal / External
-* Changing Functions
+** Changing Functions
 [2015-02-25 Wed 10:45]
-* Function Mapping
+** Function Mapping
 :LOGBOOK:
 CLOCK: [2015-02-25 Wed 10:46]--[2015-02-25 Wed 10:47] =>  0:01
 :END:
