@@ -158,3 +158,92 @@ CLOCK: [2015-02-25 Wed 10:46]--[2015-02-25 Wed 10:47] =>  0:01
 :END:
 [2015-02-25 Wed 10:46]
 Adapter
+** Update Wrapper
+[2015-02-25 Wed 13:31]
+** Decorated Wrappers
+:LOGBOOK:
+CLOCK: [2015-02-25 Wed 13:31]--[2015-02-25 Wed 13:33] =>  0:02
+:END:
+[2015-02-25 Wed 13:31]
+A decorator can be decorated by another decorator
+** Decorated Decorators
+:LOGBOOK:
+CLOCK: [2015-02-25 Wed 13:33]--[2015-02-25 Wed 13:35] =>  0:02
+:END:
+[2015-02-25 Wed 13:33]
+** Cache Management
+:LOGBOOK:
+CLOCK: [2015-02-25 Wed 13:36]--[2015-02-25 Wed 13:41] =>  0:05
+:END:
+[2015-02-25 Wed 13:36]
+*** Memoization
+[2015-02-25 Wed 13:36]
+** Save Time Now
+:LOGBOOK:
+CLOCK: [2015-02-25 Wed 13:43]--[2015-02-25 Wed 13:51] =>  0:08
+:END:
+[2015-02-25 Wed 13:42]
+Successive element / the element -> Golden Ratio
+Fibonacci Func Call Counts / Fibonacci result -> Golden Ratio
+** Trace Tool
+:LOGBOOK:
+CLOCK: [2015-02-25 Wed 15:02]--[2015-02-25 Wed 15:45] =>  0:43
+CLOCK: [2015-02-25 Wed 14:47]--[2015-02-25 Wed 14:49] =>  0:02
+CLOCK: [2015-02-25 Wed 13:51]--[2015-02-25 Wed 14:01] =>  0:10
+:END:
+[2015-02-25 Wed 13:51]
+*** Types of Tools
+[2015-02-25 Wed 13:52]
+| Debug Tool | Performance Tool | Expresiveness Tool |
+| countcalls | memo             | n_ary              |
+| Trace      |                  |                    |
+
+Trace -> A decorator to trace a recursive function
+** Disable Decorator
+:LOGBOOK:
+CLOCK: [2015-02-25 Wed 15:45]--[2015-02-25 Wed 15:50] =>  0:05
+:END:
+[2015-02-25 Wed 15:45]
+#+begin_src python
+def disabled(f): return f
+trace = disabled
+#+end_src
+** Back to Languages
+:LOGBOOK:
+CLOCK: [2015-02-25 Wed 15:50]--[2015-02-25 Wed 15:59] =>  0:09
+:END:
+[2015-02-25 Wed 15:50]
+Context Free Lanuages
+** Writting Grammar
+:LOGBOOK:
+CLOCK: [2015-02-25 Wed 15:59]--[2015-02-25 Wed 16:13] =>  0:14
+:END:
+[2015-02-25 Wed 15:59]
+| Grammer                       | Language |
+| Exp => Term[-+]Exp \vert Term |          |
+| ...                           |          |
+** Descriptionary
+[2015-03-01 Sun 14:45]
+** White Space
+[2015-03-01 Sun 14:45]
+** Parsing
+[2015-03-01 Sun 14:45]
+- Recognizer :: only recognize that if there is a regex in the given string
+- Parser :: not only recognize but also give a structure of the string
+** Speedy Parsing
+[2015-03-01 Sun 14:55]
+* Catching typos
+[2015-03-01 Sun 15:46]
+* Summary
+[2015-03-01 Sun 15:46]
+** Tools - components
+[2015-03-01 Sun 15:47]
+*** Language
+[2015-03-01 Sun 16:02]
+- Grammar
+- Interpreter
+- Compiler
+*** Functions
+- compose
+- object
+[2015-03-01 Sun 16:03]
